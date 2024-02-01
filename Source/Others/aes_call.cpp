@@ -12,12 +12,11 @@ int main(int argc, char *argv[])
     // }
     char msg[1000];
     std::string ciphertext, key, iv;
-
+    key = argv[1];
     int inputType = atoi(argv[7]);
     if(inputType == 1){
         std::string s(argv[1]);
         //std::cout << s << std::endl;
-        key = base64().base64_decode(s);
         if(strcmp(argv[3], "n/a")){
             std::string s2(argv[3]);
             //std::cout << s2 << std::endl;
@@ -35,8 +34,6 @@ int main(int argc, char *argv[])
             
     }
     else{
-        key = argv[1];
-        
         if(strcmp(argv[3], "n/a")){
             iv = argv[3];
         }
